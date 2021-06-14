@@ -5,9 +5,24 @@
 
 @import "_header.scss";
 
+.main-h2 {
+  text-align: center;
+  font-size: 1.5em;
+}
+
 .box {
   display: flex;
-  
+  justify-content: space-between;
+  align-content: center;
+  padding: 20px 20%;
+  .textbox {
+    height: 300px;
+  }
+  .p-btn {
+    float: right;
+    border-bottom: 1px solid black;
+    padding-top: 50px;
+  }
 }
 
 
