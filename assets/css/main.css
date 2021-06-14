@@ -1,3 +1,29 @@
+/* header*/
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  padding-left: 20px;
+}
+
+.content2 {
+  background-image: url(../image/visual_1_pc.png);
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
 * {
   margin: 0;
   padding: 0;
