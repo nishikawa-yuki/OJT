@@ -9,12 +9,31 @@
     }li{
         padding-left: 20px;
  }
+ .content1{
+     margin: 40px;
+ }
 
  .content2{
      background-image: url(../image/visual_1_pc.png);
-     width: 100vw;
+     margin: 0 10%;
+     width: 80vw;
      height: 100vh;
      background-repeat: no-repeat;
      text-align: center;
-     
+     display: flex;
+     justify-content: center;
  }
+ .logo{
+     position: absolute;
+ }
+.logo2{
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    margin-top: 300px;
+    margin-left: 500px;   
+}
+.content3{
+    margin-top: 80px;
+
+}
