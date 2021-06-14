@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 /* header*/
 .nav {
   display: -webkit-box;
@@ -24,16 +29,17 @@ li {
   text-align: center;
 }
 
-* {
-  margin: 0;
-  padding: 0;
+.box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-.footer-text {
+footer {
   background-color: black;
   color: white;
   text-align: center;
-  font-size: 20px;
-  padding: 30px auto;
+  padding: 50px;
+  font-size: 1em;
 }
 /*# sourceMappingURL=main.css.map */
