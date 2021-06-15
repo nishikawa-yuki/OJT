@@ -3,7 +3,11 @@
   padding: 0;
 }
 
+
 @import "_header.scss";
+
+
+
 
 .main-h2 {
   text-align: center;
@@ -14,14 +18,20 @@
   display: flex;
   justify-content: space-between;
   align-content: center;
-  padding: 20px 20%;
-  .textbox {
-    height: 300px;
+  padding: 40px 18%;
+  .up-box{
+    .text-box {
+      width: 300px;
+      height: 100px;
+      padding: 10px;
+    }
+  }
+  .p-title{
+    overflow-wrap:  break-word;
   }
   .p-btn {
     float: right;
     border-bottom: 1px solid black;
-    padding-top: 50px;
   }
 }
 
