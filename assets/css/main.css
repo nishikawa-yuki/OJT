@@ -43,10 +43,10 @@ li {
 
 .content2 .content2-box {
   background-image: url(../image/visual_1_pc.png);
+  background-size: 1024px 448px;
   background-repeat: no-repeat;
   width: 80vw;
   height: 100vh;
-  text-align: center;
 }
 
 .logo {
@@ -58,9 +58,9 @@ li {
 .logo2 {
   position: absolute;
   right: 80px;
-  bottom: 7px;
-  width: 50%;
-  height: 50%;
+  bottom: 50px;
+  width: 495px;
+  height: 261px;
 }
 
 main {
