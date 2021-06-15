@@ -42,6 +42,8 @@ $sp:767px;
   @include max-screen($sp){//スマホサイズ
     flex-direction: column;
     justify-content: center;
+    align-content: center;
+    margin: 0 auto;
   } 
   .up-box{
     &:hover {
@@ -53,15 +55,39 @@ $sp:767px;
       width: 300px;
       height: 100px;
       padding: 10px;
+      .p-title{
+        overflow-wrap:  break-word;
+      }
+      .up-date {
+        font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+      }
     }
   }
-  .p-title{
-    overflow-wrap:  break-word;
-  }
-  .p-btn {
-    float: right;
-    border-bottom: 1px solid black;
-    margin: 0 10px 40px 0; 
+}
+
+.readmore {
+  text-align: right;
+  padding: 0 10px 10px 0;
+  .border{
+    color: black;
+    display: inline-block;
+    padding-bottom: 4px;
+    position: relative;
+    text-decoration: none;
+    &::after{
+      background-color: black;
+      bottom: -5px;
+      content: '';
+      display: block;
+      height: 1px;
+      right: 0;
+      position: absolute;
+      transition: .5s all;
+      width: 10px;
+    }
+    &:hover::after {
+      width: 100%;
+    }
   }
 }
 
