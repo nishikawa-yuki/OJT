@@ -21,6 +21,11 @@ $sp:767px;
     }
 }
 
+.header {
+  display: flex;
+  justify-content: flex-end;
+}
+
 .nav{
     display: flex;
     justify-content: flex-end;
@@ -36,23 +41,6 @@ $sp:767px;
      height: 80px;
  }
 
- .content2{
-    //  text-align: center;
-    //  display: flex;
-    //  justify-content: center;
-     .content2-box {
-        background-image: url(../image/visual_1_pc.png);
-        background-size: 1024px 448px;
-        background-repeat: no-repeat;
-        width: 80vw;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        
-     }
- }
  .logo{
      position: absolute;
      top: 50px;
@@ -60,14 +48,8 @@ $sp:767px;
  }
 .logo2{
     position: absolute;
-    
     right: 80px;
     bottom: 50px;
     width: 495px;
-    height: 261px;
-    // margin-top: 300px;
-    // margin-left: 500px;   
+    height: 261px;  
 }
-// .content3{
-//     // margin-top: 80px;
-// }
