@@ -23,14 +23,10 @@ li {
 
 .content1 {
   margin: 40px;
+  height: 80px;
 }
 
 .content2 {
-  background-image: url(../image/visual_1_pc.png);
-  margin: 0 10%;
-  width: 80vw;
-  height: 100vh;
-  background-repeat: no-repeat;
   text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -40,20 +36,26 @@ li {
           justify-content: center;
 }
 
+.content2 .content2-box {
+  background-image: url(../image/visual_1_pc.png);
+  background-repeat: no-repeat;
+  width: 80vw;
+  height: 100vh;
+  text-align: center;
+}
+
 .logo {
   position: absolute;
+  top: 50px;
+  left: 50px;
 }
 
 .logo2 {
   position: absolute;
   right: 80px;
-  bottom: 55px;
+  bottom: 7px;
   width: 50%;
   height: 50%;
-}
-
-.content3 {
-  margin-top: 80px;
 }
 
 .main-h2 {
