@@ -46,10 +46,10 @@ li {
 
 .logo2 {
   position: absolute;
+  right: 80px;
+  bottom: 55px;
   width: 50%;
   height: 50%;
-  margin-top: 300px;
-  margin-left: 500px;
 }
 
 .content3 {
