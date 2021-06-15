@@ -73,6 +73,15 @@ li {
   padding: 40px 18%;
 }
 
+@media screen and (max-width: 767px) {
+  .box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .box .up-box .text-box {
   width: 300px;
   height: 100px;
