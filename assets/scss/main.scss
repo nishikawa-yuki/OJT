@@ -7,6 +7,25 @@
 @import "_header.scss";
 
 
+$pc:1152px;
+$sp:767px;
+@mixin max-screen($break-point) { //$break-point引数
+    @media screen and (max-width: $break-point){
+        @content;
+    }
+}
+@mixin min-screen($break-point) {
+    @media screen and (min-width: $break-point){
+        @content;
+    }
+}
+@mixin screen($min, $max) {
+    @media screen and (min-width: $min) and (max-width: $max){
+        @content;
+    }
+}
+
+
 
 
 .main-h2 {
