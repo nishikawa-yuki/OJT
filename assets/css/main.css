@@ -31,22 +31,22 @@ li {
   height: 80px;
 }
 
-.content2 {
-  text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
 .content2 .content2-box {
   background-image: url(../image/visual_1_pc.png);
   background-size: 1024px 448px;
   background-repeat: no-repeat;
   width: 80vw;
   height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
 }
 
 .logo {

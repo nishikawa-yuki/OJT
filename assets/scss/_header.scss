@@ -37,15 +37,19 @@ $sp:767px;
  }
 
  .content2{
-     text-align: center;
-     display: flex;
-     justify-content: center;
+    //  text-align: center;
+    //  display: flex;
+    //  justify-content: center;
      .content2-box {
         background-image: url(../image/visual_1_pc.png);
         background-size: 1024px 448px;
         background-repeat: no-repeat;
-         width: 80vw;
+        width: 80vw;
         height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
         
      }
  }
