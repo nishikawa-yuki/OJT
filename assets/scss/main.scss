@@ -6,6 +6,10 @@
 
 @import "_header.scss";
 
+main {
+  max-width: 1152px;
+  margin: 0 auto;
+}
 
 $pc:1152px;
 $sp:767px;
@@ -25,11 +29,6 @@ $sp:767px;
     }
 }
 
-
-@media screen and (max-width){
-  @content;
-}
-
 .main-h2 {
   text-align: center;
   font-size: 1.5em;
@@ -39,12 +38,16 @@ $sp:767px;
   display: flex;
   justify-content: space-between;
   align-content: center;
-  margin: 40px 18%;
   @include max-screen($sp){//スマホサイズ
     flex-direction: column;
     justify-content: center;
   } 
   .up-box{
+    &:hover {
+      box-shadow: 0 5px 10px black;
+      transform: translate(0, -5px);
+      border-radius: 10px;
+    }
     .text-box {
       width: 300px;
       height: 100px;
@@ -57,6 +60,7 @@ $sp:767px;
   .p-btn {
     float: right;
     border-bottom: 1px solid black;
+    margin-bottom: 40px; 
   }
 }
 
