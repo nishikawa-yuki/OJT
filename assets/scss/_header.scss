@@ -24,18 +24,25 @@ $sp:767px;
 .header {
   display: flex;
   justify-content: flex-end;
+  height: 150px;
+  position: relative;
+  .header-right{
+      margin-top: 75px;
+  }
 }
+
 
 .nav{
     display: flex;
     justify-content: flex-end;
-
-    }ul{
     list-style: none;
-
-    }li{
+    a{
         padding-left: 20px;
- }
+        color: black;
+      
+    }
+}
+    
  .content1{
      margin: 40px;
      height: 80px;
@@ -45,11 +52,25 @@ $sp:767px;
      position: absolute;
      top: 50px;
      left: 50px;
+     z-index: 2;
+ }
+
+ .main-view{
+     position: relative;
  }
 .logo2{
     position: absolute;
-    right: 80px;
-    bottom: 50px;
+    right: 1px;
+    bottom: -47px;
     width: 495px;
     height: 261px;  
+}
+.main-view-img{
+    // text-align: center;
+    margin: 0 auto;
+    display: block;
+
+}
+p{
+    padding-top: 20px;
 }
