@@ -26,8 +26,26 @@ $sp:767px;
   justify-content: flex-end;
   height: 150px;
   position: relative;
+  @include max-screen($sp){//スマホサイズ
+    height: 300px;
+    justify-content: center;
+} 
+    .header-left {
+    @include max-screen($sp){
+        margin: auto 0;
+    }
+ }
   .header-right{
       margin-top: 75px;
+      .hamburger-button{
+          display: none;
+
+      }
+      @include max-screen($sp){//スマホサイズ
+      position: fixed;
+      top: 50px;
+      right: 50px;
+     } 
   }
 }
 
@@ -42,17 +60,16 @@ $sp:767px;
       
     }
 }
-    
- .content1{
-     margin: 40px;
-     height: 80px;
- }
+
 
  .logo{
      position: absolute;
      top: 50px;
      left: 50px;
      z-index: 2;
+     @include max-screen($sp) {
+        position: static;
+     }
  }
 
  .main-view{
@@ -74,3 +91,52 @@ $sp:767px;
 p{
     padding-top: 20px;
 }
+
+
+#hamberger.hamberger {
+    display: none !important;
+  }
+  
+  @media screen and (max-width:767px) {
+    .btn {
+      display: block;
+      position: relative;
+      width: 35px;
+      height: 50px;
+      cursor: pointer;
+    }
+    .icon, .ion::before, .icon::after{
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      margin: auto;
+      height: 2px;
+      width: 35px;
+      background-color: black;
+      display: block;
+      content: ‘’;
+      transition: all 1s;
+    }
+    .icon::before {
+      top: 25px;
+    }
+    .icon::after {
+      top: -25px;
+    }
+    .hamberger:checked ~.btn .icon {
+      background-color: transparent;
+    }
+    .hamberger:checked ~.btn .icon::before {
+      transform: rotate(-45deg);
+      top: 0;
+    }
+    .hamberger:checked ~.btn .icon::after {
+      transform: rotate(45deg);
+      top: 0;
+    }
+    .hamberger:checked ~ .nav {
+      display: flex;
+    }
+  }
