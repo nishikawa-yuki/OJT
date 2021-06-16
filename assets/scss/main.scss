@@ -46,6 +46,9 @@ $sp:767px;
     // margin: 0 auto;
   } 
   .up-box{
+    @include max-screen($sp){//スマホサイズ
+      margin: 0  auto;
+    } 
     &:hover {
       box-shadow: 0 5px 10px black;
       transform: translate(0, -5px);
@@ -55,9 +58,6 @@ $sp:767px;
       width: 300px;
       height: 100px;
       padding: 10px;
-      @include max-screen($sp){//スマホサイズ
-        margin: 0 ;
-      } 
       .p-title{
         overflow-wrap:  break-word;
       }
