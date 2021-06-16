@@ -3,13 +3,6 @@
   padding: 0;
 }
 
-@import "_header.scss";
-
-main {
-  max-width: 1152px;
-  margin: 0 auto;
-}
-
 $pc:1152px;
 $sp:767px;
 @mixin max-screen($break-point) { //$break-point引数
@@ -27,6 +20,17 @@ $sp:767px;
         @content;
     }
 }
+@import "_header.scss";
+
+main {
+  max-width: 1152px;
+  margin: 0 auto;
+  @include max-screen($sp) {
+    max-width: 767px;
+  }
+
+}
+
 
 .main-h2 {
   text-align: center;
