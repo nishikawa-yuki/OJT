@@ -80,7 +80,11 @@ $sp:767px;
     right: 1px;
     bottom: -47px;
     width: 495px;
-    height: 261px;  
+    height: 261px; 
+    @include max-screen($sp) {
+      right: 250px;
+      bottom: 250px;
+   }
 }
 .main-view-img{
     // text-align: center;

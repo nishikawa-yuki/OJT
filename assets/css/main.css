@@ -92,6 +92,13 @@ header {
   height: 261px;
 }
 
+@media screen and (max-width: 767px) {
+  .logo2 {
+    right: 250px;
+    bottom: 250px;
+  }
+}
+
 .main-view-img {
   margin: 0 auto;
   display: block;
