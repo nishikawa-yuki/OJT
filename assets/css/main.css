@@ -188,7 +188,6 @@ main {
             justify-content: center;
     -ms-flex-line-pack: center;
         align-content: center;
-    margin: 0 auto;
   }
 }
 
@@ -206,6 +205,12 @@ main {
   padding: 10px;
 }
 
+@media screen and (max-width: 767px) {
+  .box .up-box .text-box {
+    margin: 0;
+  }
+}
+
 .box .up-box .text-box .p-title {
   overflow-wrap: break-word;
 }
@@ -215,7 +220,9 @@ main {
 }
 
 .readmore {
+  width: 300px;
   padding: 0 10px 10px 0;
+  text-align: right;
 }
 
 .readmore .border {

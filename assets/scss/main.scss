@@ -43,7 +43,7 @@ $sp:767px;
     flex-direction: column;
     justify-content: center;
     align-content: center;
-    margin: 0 auto;
+    // margin: 0 auto;
   } 
   .up-box{
     &:hover {
@@ -55,6 +55,9 @@ $sp:767px;
       width: 300px;
       height: 100px;
       padding: 10px;
+      @include max-screen($sp){//スマホサイズ
+        margin: 0 ;
+      } 
       .p-title{
         overflow-wrap:  break-word;
       }
@@ -66,8 +69,9 @@ $sp:767px;
 }
 
 .readmore {
-  // text-align: right;
+  width: 300px;
   padding: 0 10px 10px 0;
+  text-align: right;
   .border{
     color: black;
     display: inline-block;
