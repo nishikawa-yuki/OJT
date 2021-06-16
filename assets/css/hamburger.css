@@ -1,45 +1,59 @@
-@charset "utf-8";
-/* CSS Document */
-
-.hamburger-button {
-  display: flex; /* media query時にはflexでもどして */
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  z-index: 1002;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  width: 40px;
-  height: 40px;
-  outline: none;
-}
-.hamburger-button svg {
-  height: 25px; /* autoではなく同じ数字で */
-  width: 25px; /* autoではなく同じ数字で */
-}
-.hamburger-button path {
-  fill: #000;
-}
-.hamburger-nav {
-  position: fixed;
-  width: 20%;
-  height: 50%;
-  background-color:transparent;
-  z-index: 1001;
-  padding: 20px;
+.hamberger, .btn {
   display: none;
 }
-#hamburger-overlay {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: rgba(0,0,0,.5);
-  pointer-events: none;
-  opacity: 0;
-  z-index: 1000;
+
+@media screen and (max-width:780px) {
+  .nav {
+      display: none;
+  }
+
+  .btn {
+      display: block;
+      /* top: 20px; */
+      position: relative;
+      width: 35px;
+      height: 50px;
+      cursor: pointer;
+  }
+
+  .icon, .icon::before, .icon::after{
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      margin: auto;
+      height: 2px;
+      width: 35px;
+      background-color: black;
+      display: block;
+      content: '';
+      transition: all 1s;
+  }
+
+  .icon::before {
+      top: 25px;
+  }
+
+  .icon::after {
+      top: -25px;
+  }
+
+  .hamberger:checked ~.btn .icon {
+      background-color: transparent;
+  }
+
+  .hamberger:checked ~.btn .icon::before {
+      transform: rotate(-45deg);
+      top: 0;
+  }
+
+  .hamberger:checked ~.btn .icon::after {
+      transform: rotate(45deg);
+      top: 0;
+  }
+
+  .hamberger:checked ~ .nav {
+      display: flex;
+  }
 }
