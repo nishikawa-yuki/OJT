@@ -2,6 +2,9 @@
 header {
   max-width: 1152px;
   margin: 0 auto;
+  @include max-screen($sp) {
+    max-width: 767px;
+  }
 }
 $pc:1152px;
 $sp:767px;
@@ -43,7 +46,7 @@ $sp:767px;
 .header {
   display: flex;
   justify-content: flex-end;
-  height: 27vh;
+  height: 150px;
   position: relative;
   @include max-screen($sp){//スマホサイズ
     height: 300px;
@@ -84,7 +87,7 @@ $sp:767px;
 
  .logo{
      position: absolute;
-     top: 9%;
+     top: 20%;
      left: 0;
      z-index: 2;
      @include max-screen($sp) {

@@ -10,6 +10,12 @@ header {
   margin: 0 auto;
 }
 
+@media screen and (max-width: 767px) {
+  header {
+    max-width: 767px;
+  }
+}
+
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -17,7 +23,7 @@ header {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  height: 27vh;
+  height: 150px;
   position: relative;
 }
 
@@ -70,7 +76,7 @@ header {
 
 .logo {
   position: absolute;
-  top: 9%;
+  top: 20%;
   left: 0;
   z-index: 2;
 }
@@ -204,7 +210,7 @@ main {
 .main-h2 {
   text-align: center;
   font-size: 2em;
-  padding: 50px 0;
+  padding: 10% 0 0 0;
 }
 
 .box {
@@ -216,7 +222,7 @@ main {
           justify-content: space-between;
   -ms-flex-line-pack: center;
       align-content: center;
-  padding: 30px 0;
+  padding: 5%;
 }
 
 @media screen and (max-width: 767px) {
@@ -293,12 +299,18 @@ main {
 }
 
 footer {
+  max-width: 1152px;
+  margin: 0 auto;
   background-color: black;
   color: white;
   text-align: center;
-  width: auto;
   padding: 40px 0;
-  margin: 50px auto 0 auto;
   font-size: 1em;
+}
+
+@media screen and (max-width: 767px) {
+  footer {
+    max-width: 767px;
+  }
 }
 /*# sourceMappingURL=main.css.map */

@@ -1,9 +1,12 @@
 footer{
+  max-width: 1152px;
+  margin: 0 auto;
   background-color: black;
   color: white;
   text-align: center;
-  width: auto;
   padding: 40px 0;
-  margin: 50px auto 0 auto;
   font-size: 1em;
+  @include max-screen($sp) {
+    max-width: 767px;
+  }
 }
