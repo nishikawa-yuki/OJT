@@ -21,6 +21,25 @@ $sp:767px;
     }
 }
 
+@mixin flexBox($content:center, $direction:row) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $content; 
+    align-items: center;  
+}
+
+@mixin pcOnly {
+    @media screen and (min-width: 768px){
+        @content;
+    }
+}
+@mixin spOnly {
+    @media screen and (max-width: 767px){
+        @content;
+    }
+}
+
+
 .header {
   display: flex;
   justify-content: flex-end;
@@ -46,13 +65,16 @@ $sp:767px;
         right: 10px;
     } 
   }
+     
 }
+
 
 
 .nav{
     display: flex;
     justify-content: flex-end;
     list-style: none;
+    line-height: 30px;
     a{
         padding-left: 20px;
         color: black;
@@ -101,57 +123,53 @@ $sp:767px;
   }
   @include max-screen($sp) {
    text-align: center; 
-   line-height: 30px;
   }
 }
 
 
+//ハンバーガー
+@include pcOnly {
+    .nav-btn{
+        display: none;
+    }
+}
 
-#hamberger.hamberger {
-    display: none !important;
-  }
-  
-  @media screen and (max-width:767px) {
-    .btn {
-      display: block;
-      position: relative;
-      width: 35px;
-      height: 50px;
-      cursor: pointer;
+@include spOnly {
+    .nav{
+        // メニュー本体
+        @include flexBox(center,column);
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        z-index: 1;
+        width: 100vw;
+        height: 50vh;
+        background:white;
+        // アニメーション前のメニューの状態
+        transform: translateX(100vw);
+        // アニメーション後のメニューの状態
+        &.is-active{
+            transform: translateX(0);
+        }
+        // メニュー開閉アニメーションの設定
+        transition: all .3s linear;
+
+        //メニューの中身
+        &-item{
+            padding-top: 50px;
+            text-align: center;
+
+        }
+
+        // メニュー開閉ボタン：ハンバーガー⇔バツ印はjsで制御
+        &-btn{
+            @include flexBox;
+            width: 40px;
+            height: 40px;
+            background:white;
+            i {
+                z-index: 2;
+            }
+        }
     }
-    .icon, .ion::before, .icon::after{
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      right: 0;
-      left: 0;
-      margin: auto;
-      height: 2px;
-      width: 35px;
-      background-color: black;
-      display: block;
-      content: ‘’;
-      transition: all 1s;
-    }
-    .icon::before {
-      top: 25px;
-    }
-    .icon::after {
-      top: -25px;
-    }
-    .hamberger:checked ~.btn .icon {
-      background-color: transparent;
-    }
-    .hamberger:checked ~.btn .icon::before {
-      transform: rotate(-45deg);
-      top: 0;
-    }
-    .hamberger:checked ~.btn .icon::after {
-      transform: rotate(45deg);
-      top: 0;
-    }
-    .hamberger:checked ~ .nav {
-      flex-direction: column;
-      line-height: 30px;
-    }
-  }
+}

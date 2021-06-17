@@ -60,6 +60,7 @@ header {
       -ms-flex-pack: end;
           justify-content: flex-end;
   list-style: none;
+  line-height: 30px;
 }
 
 .nav a {
@@ -121,62 +122,70 @@ header {
 @media screen and (max-width: 767px) {
   .main-view-text {
     text-align: center;
-    line-height: 30px;
   }
 }
 
-#hamberger.hamberger {
-  display: none !important;
+@media screen and (min-width: 768px) {
+  .nav-btn {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 767px) {
-  .btn {
-    display: block;
-    position: relative;
-    width: 35px;
-    height: 50px;
-    cursor: pointer;
-  }
-  .icon, .ion::before, .icon::after {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    margin: auto;
-    height: 2px;
-    width: 35px;
-    background-color: black;
-    display: block;
-    content: ‘’;
-    -webkit-transition: all 1s;
-    transition: all 1s;
-  }
-  .icon::before {
-    top: 25px;
-  }
-  .icon::after {
-    top: -25px;
-  }
-  .hamberger:checked ~ .btn .icon {
-    background-color: transparent;
-  }
-  .hamberger:checked ~ .btn .icon::before {
-    -webkit-transform: rotate(-45deg);
-            transform: rotate(-45deg);
-    top: 0;
-  }
-  .hamberger:checked ~ .btn .icon::after {
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
-    top: 0;
-  }
-  .hamberger:checked ~ .nav {
+  .nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    line-height: 30px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    width: 100vw;
+    height: 50vh;
+    background: white;
+    -webkit-transform: translateX(100vw);
+            transform: translateX(100vw);
+    -webkit-transition: all .3s linear;
+    transition: all .3s linear;
+  }
+  .nav.is-active {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  .nav-item {
+    padding-top: 50px;
+    text-align: center;
+  }
+  .nav-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 40px;
+    height: 40px;
+    background: white;
+  }
+  .nav-btn i {
+    z-index: 2;
   }
 }
 
