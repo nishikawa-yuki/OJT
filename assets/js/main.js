@@ -35,3 +35,18 @@ $(function() {
   })
 });
 
+
+$(function(){
+  // ハンバーガー＆閉じるボタンを押した時
+  $('.menu-btn').on('click', function(){
+      $('i').toggleClass('fa-bars');
+      $('i').toggleClass('fa-times');
+      $('.menu').toggleClass('is-active');
+  });
+  // メニューの中身を押した時(メニューが表示されている時のみ)
+  $('.menu-item').on('click', function(){
+      $('i').addClass('fa-bars');
+      $('i').removeClass('fa-times');
+      $('.menu').removeClass('is-active');
+  });
+});
