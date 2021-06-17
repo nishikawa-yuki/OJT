@@ -41,10 +41,10 @@ $sp:767px;
           display: none;
       }
       @include max-screen($sp){//スマホサイズ
-      position: fixed;
-      top: 50px;
-      right: 50px;
-     } 
+        position: fixed;
+        top: 50px;
+        right: 10px;
+    } 
   }
 }
 
