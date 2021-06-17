@@ -11,13 +11,7 @@ header {
 }
 
 .header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  height: 150px;
+  height: 30vh;
   position: relative;
 }
 
@@ -34,10 +28,6 @@ header {
   .header .header-left {
     margin: auto 0;
   }
-}
-
-.header .header-right {
-  margin-top: 75px;
 }
 
 .header .header-right .hamburger-button {

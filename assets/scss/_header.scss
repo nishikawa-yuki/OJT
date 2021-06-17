@@ -22,9 +22,7 @@ $sp:767px;
 }
 
 .header {
-  display: flex;
-  justify-content: flex-end;
-  height: 150px;
+  height: 30vh;
   position: relative;
   @include max-screen($sp){//スマホサイズ
     height: 300px;
@@ -36,7 +34,6 @@ $sp:767px;
     }
  }
   .header-right{
-      margin-top: 75px;
       .hamburger-button{
           display: none;
       }
