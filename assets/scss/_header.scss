@@ -87,14 +87,25 @@ $sp:767px;
    }
 }
 .main-view-img{
-    // text-align: center;
     margin: 0 auto;
     display: block;
-
 }
-p{
+.main-view-text {
+  br{
+    display: none;
+    @include max-screen($sp){
+      display: block;
+    }
+  }
+  >p{
     padding-top: 20px;
+  }
+  @include max-screen($sp) {
+   text-align: center; 
+   line-height: 30px
+  }
 }
+
 
 
 #hamberger.hamberger {
