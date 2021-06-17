@@ -39,13 +39,12 @@ $sp:767px;
       margin-top: 75px;
       .hamburger-button{
           display: none;
-
       }
       @include max-screen($sp){//スマホサイズ
-      position: fixed;
-      top: 50px;
-      right: 50px;
-     } 
+        position: fixed;
+        top: 50px;
+        right: 10px;
+    } 
   }
 }
 

@@ -48,7 +48,7 @@ header {
   .header .header-right {
     position: fixed;
     top: 50px;
-    right: 50px;
+    right: 10px;
   }
 }
 
