@@ -148,6 +148,10 @@ $sp:767px;
       top: 0;
     }
     .hamberger:checked ~ .nav {
+
+      display: flex;
+      
+
       flex-direction: column;
       line-height: 30px;
     }
