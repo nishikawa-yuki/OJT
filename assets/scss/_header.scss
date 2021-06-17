@@ -39,7 +39,6 @@ $sp:767px;
       margin-top: 75px;
       .hamburger-button{
           display: none;
-
       }
       @include max-screen($sp){//スマホサイズ
       position: fixed;
@@ -102,7 +101,7 @@ $sp:767px;
   }
   @include max-screen($sp) {
    text-align: center; 
-   line-height: 30px
+   line-height: 30px;
   }
 }
 
@@ -152,6 +151,7 @@ $sp:767px;
       top: 0;
     }
     .hamberger:checked ~ .nav {
-      display: flex;
+      flex-direction: column;
+      line-height: 30px;
     }
   }
