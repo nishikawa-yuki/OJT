@@ -3,13 +3,6 @@
   padding: 0;
 }
 
-@import "_header.scss";
-
-main {
-  max-width: 1152px;
-  margin: 0 auto;
-}
-
 $pc:1152px;
 $sp:767px;
 @mixin max-screen($break-point) { //$break-point引数
@@ -27,11 +20,21 @@ $sp:767px;
         @content;
     }
 }
+@import "_header.scss";
+
+main {
+  max-width: 1152px;
+  margin: 0 auto;
+  @include max-screen($sp) {
+    max-width: 767px;
+  }
+}
+
 
 .main-h2 {
   text-align: center;
-  font-size: 1.5em;
-  padding: 20px;
+  font-size: 2em;
+  padding: 50px 0;
 }
 
 .box {
@@ -46,6 +49,9 @@ $sp:767px;
     // margin: 0 auto;
   } 
   .up-box{
+    @include max-screen($sp){//スマホサイズ
+      margin: 0  auto;
+    } 
     &:hover {
       box-shadow: 0 5px 10px black;
       transform: translate(0, -5px);
@@ -55,9 +61,6 @@ $sp:767px;
       width: 300px;
       height: 100px;
       padding: 10px;
-      @include max-screen($sp){//スマホサイズ
-        margin: 0 ;
-      } 
       .p-title{
         overflow-wrap:  break-word;
       }
@@ -70,7 +73,7 @@ $sp:767px;
 
 .readmore {
   width: 300px;
-  padding: 0 10px 10px 0;
+  padding: 40px 10px 10px 0;
   text-align: right;
   .border{
     color: black;

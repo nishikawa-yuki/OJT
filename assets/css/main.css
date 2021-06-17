@@ -92,13 +92,37 @@ header {
   height: 261px;
 }
 
+@media screen and (max-width: 767px) {
+  .logo2 {
+    right: 250px;
+    bottom: 250px;
+  }
+}
+
 .main-view-img {
   margin: 0 auto;
   display: block;
 }
 
-p {
+.main-view-text br {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .main-view-text br {
+    display: block;
+  }
+}
+
+.main-view-text > p {
   padding-top: 20px;
+}
+
+@media screen and (max-width: 767px) {
+  .main-view-text {
+    text-align: center;
+    line-height: 30px;
+  }
 }
 
 #hamberger.hamberger {
@@ -159,10 +183,16 @@ main {
   margin: 0 auto;
 }
 
+@media screen and (max-width: 767px) {
+  main {
+    max-width: 767px;
+  }
+}
+
 .main-h2 {
   text-align: center;
-  font-size: 1.5em;
-  padding: 20px;
+  font-size: 2em;
+  padding: 50px 0;
 }
 
 .box {
@@ -191,6 +221,12 @@ main {
   }
 }
 
+@media screen and (max-width: 767px) {
+  .box .up-box {
+    margin: 0  auto;
+  }
+}
+
 .box .up-box:hover {
   -webkit-box-shadow: 0 5px 10px black;
           box-shadow: 0 5px 10px black;
@@ -205,12 +241,6 @@ main {
   padding: 10px;
 }
 
-@media screen and (max-width: 767px) {
-  .box .up-box .text-box {
-    margin: 0;
-  }
-}
-
 .box .up-box .text-box .p-title {
   overflow-wrap: break-word;
 }
@@ -221,7 +251,7 @@ main {
 
 .readmore {
   width: 300px;
-  padding: 0 10px 10px 0;
+  padding: 40px 10px 10px 0;
   text-align: right;
 }
 
@@ -254,8 +284,9 @@ footer {
   background-color: black;
   color: white;
   text-align: center;
+  width: auto;
   padding: 40px 0;
-  margin: 0 auto;
+  margin: 50px auto 0 auto;
   font-size: 1em;
 }
 /*# sourceMappingURL=main.css.map */
