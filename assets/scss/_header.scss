@@ -22,7 +22,9 @@ $sp:767px;
 }
 
 .header {
-  height: 30vh;
+  display: flex;
+  justify-content: flex-end;
+  height: 150px;
   position: relative;
   @include max-screen($sp){//スマホサイズ
     height: 300px;
@@ -34,6 +36,7 @@ $sp:767px;
     }
  }
   .header-right{
+      margin-top: 75px;
       .hamburger-button{
           display: none;
       }
@@ -148,10 +151,6 @@ $sp:767px;
       top: 0;
     }
     .hamberger:checked ~ .nav {
-
-      display: flex;
-      
-
       flex-direction: column;
       line-height: 30px;
     }
